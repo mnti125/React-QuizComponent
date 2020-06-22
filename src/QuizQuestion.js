@@ -17,9 +17,10 @@ class QuizQuestion extends Component {
         <section className="buttons">
           <ul>
             {this.props.quiz_question.answer_options.map(
-              (answer_option, index) => (
-                <QuizQuestionButton clickHandler={this.handleClick.bind(this)} key={index} button_text={answer_option} />
-              )
+              (answer_option, index) => {
+               return <QuizQuestionButton clickHandler={this.handleClick.bind(this)} key={index} button_text={answer_option} />
+
+              }
             )}
           </ul>
         </section>
